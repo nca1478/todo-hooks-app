@@ -9,11 +9,12 @@ import ReactDOM from 'react-dom'
 // import SimpleForm from './components/02-useEffect/SimpleForm'
 // import FormWithCustomHook from './components/03-useForm/FormWithCustomHook'
 // import MultipleCustomHooks from './components/04-examples/MultipleCustomHooks'
-import FocusScreen from './components/05-useRef/FocusScreen'
+// import FocusScreen from './components/05-useRef/FocusScreen'
+import RealExampleRef from './components/05-useRef/RealExampleRef'
 
 // Styles
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './components/style.css'
 
 // Render Method
-ReactDOM.render(<FocusScreen />, document.getElementById('root'))
+ReactDOM.render(<RealExampleRef />, document.getElementById('root'))

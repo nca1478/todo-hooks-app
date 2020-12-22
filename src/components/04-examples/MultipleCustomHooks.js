@@ -10,7 +10,7 @@ const MultipleCustomHooks = () => {
   const { author, quote } = !!data && data[0]
 
   return (
-    <div className="container wrap">
+    <div>
       <h1>Breaking Bad</h1>
       <hr />
 

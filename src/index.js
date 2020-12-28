@@ -11,11 +11,12 @@ import ReactDOM from 'react-dom'
 // import MultipleCustomHooks from './components/04-examples/MultipleCustomHooks'
 // import FocusScreen from './components/05-useRef/FocusScreen'
 // import RealExampleRef from './components/05-useRef/RealExampleRef'
-import Layout from './components/06-useLayoutEffect/Layout'
+// import Layout from './components/06-useLayoutEffect/Layout'
+import { Memorize } from './components/07-memos/Memorize'
 
 // Styles
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './components/style.css'
 
 // Render Method
-ReactDOM.render(<Layout />, document.getElementById('root'))
+ReactDOM.render(<Memorize />, document.getElementById('root'))

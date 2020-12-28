@@ -13,11 +13,12 @@ import ReactDOM from 'react-dom'
 // import RealExampleRef from './components/05-useRef/RealExampleRef'
 // import Layout from './components/06-useLayoutEffect/Layout'
 // import { Memorize } from './components/07-memos/Memorize'
-import { MemoHook } from './components/07-memos/MemoHook'
+// import { MemoHook } from './components/07-memos/MemoHook'
+import { CallbackHook } from './components/07-memos/CallbackHook'
 
 // Styles
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './components/style.css'
 
 // Render Method
-ReactDOM.render(<MemoHook />, document.getElementById('root'))
+ReactDOM.render(<CallbackHook />, document.getElementById('root'))

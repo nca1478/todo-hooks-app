@@ -12,11 +12,12 @@ import ReactDOM from 'react-dom'
 // import FocusScreen from './components/05-useRef/FocusScreen'
 // import RealExampleRef from './components/05-useRef/RealExampleRef'
 // import Layout from './components/06-useLayoutEffect/Layout'
-import { Memorize } from './components/07-memos/Memorize'
+// import { Memorize } from './components/07-memos/Memorize'
+import { MemoHook } from './components/07-memos/MemoHook'
 
 // Styles
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './components/style.css'
 
 // Render Method
-ReactDOM.render(<Memorize />, document.getElementById('root'))
+ReactDOM.render(<MemoHook />, document.getElementById('root'))

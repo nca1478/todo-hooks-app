@@ -14,11 +14,12 @@ import ReactDOM from 'react-dom'
 // import Layout from './components/06-useLayoutEffect/Layout'
 // import { Memorize } from './components/07-memos/Memorize'
 // import { MemoHook } from './components/07-memos/MemoHook'
-import { CallbackHook } from './components/07-memos/CallbackHook'
+// import { CallbackHook } from './components/07-memos/CallbackHook'
+import { Padre } from './components/08-tarea-memo/Padre'
 
 // Styles
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './components/style.css'
 
 // Render Method
-ReactDOM.render(<CallbackHook />, document.getElementById('root'))
+ReactDOM.render(<Padre />, document.getElementById('root'))

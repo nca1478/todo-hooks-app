@@ -50,6 +50,13 @@ export const TodoApp = () => {
     dispatch(action)
   }
 
+  const handleToogle = (todoId) => {
+    dispatch({
+      type: 'toogle',
+      payload: todoId
+    })
+  }
+
   return (
     <div className="container wrap">
       <h1>TodoApp ({todos.length})</h1>
@@ -60,7 +67,10 @@ export const TodoApp = () => {
           <ul className="list-group list-group-flush">
             {todos.map((todo, i) => (
               <li className="list-group-item" key={todo.id}>
-                <p className="text-center">
+                <p
+                  onClick={() => handleToogle(todo.id)}
+                  className={`${todo.done && 'complete'}`}
+                >
                   {i + 1}. {todo.desc}
                 </p>
                 <button

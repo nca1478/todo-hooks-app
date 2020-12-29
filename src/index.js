@@ -15,11 +15,13 @@ import ReactDOM from 'react-dom'
 // import { Memorize } from './components/07-memos/Memorize'
 // import { MemoHook } from './components/07-memos/MemoHook'
 // import { CallbackHook } from './components/07-memos/CallbackHook'
-import { Padre } from './components/08-tarea-memo/Padre'
+// import { Padre } from './components/08-tarea-memo/Padre'
 
 // Styles
-import 'bootstrap/dist/css/bootstrap.min.css'
-import './components/style.css'
+// import 'bootstrap/dist/css/bootstrap.min.css'
+// import './components/style.css'
 
 // Render Method
-ReactDOM.render(<Padre />, document.getElementById('root'))
+// ReactDOM.render(<Padre />, document.getElementById('root'))
+
+import './components/09-useReducer/intro-reducer'

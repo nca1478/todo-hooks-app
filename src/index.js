@@ -2,6 +2,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
+// Styles
+import 'bootstrap/dist/css/bootstrap.min.css'
+import './components/style.css'
+
 // Components
 // import HookApp from './HookApp'
 // import CounterApp from './components/01-useState/CounterApp'
@@ -17,10 +21,6 @@ import ReactDOM from 'react-dom'
 // import { CallbackHook } from './components/07-memos/CallbackHook'
 // import { Padre } from './components/08-tarea-memo/Padre'
 import { TodoApp } from './components/09-useReducer/TodoApp'
-
-// Styles
-import 'bootstrap/dist/css/bootstrap.min.css'
-import './components/style.css'
 
 // Render Method
 ReactDOM.render(<TodoApp />, document.getElementById('root'))

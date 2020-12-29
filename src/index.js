@@ -16,12 +16,11 @@ import ReactDOM from 'react-dom'
 // import { MemoHook } from './components/07-memos/MemoHook'
 // import { CallbackHook } from './components/07-memos/CallbackHook'
 // import { Padre } from './components/08-tarea-memo/Padre'
+import { TodoApp } from './components/09-useReducer/TodoApp'
 
 // Styles
-// import 'bootstrap/dist/css/bootstrap.min.css'
-// import './components/style.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import './components/style.css'
 
 // Render Method
-// ReactDOM.render(<Padre />, document.getElementById('root'))
-
-import './components/09-useReducer/intro-reducer'
+ReactDOM.render(<TodoApp />, document.getElementById('root'))

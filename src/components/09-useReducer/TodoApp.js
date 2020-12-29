@@ -13,8 +13,6 @@ export const TodoApp = () => {
     description: ''
   })
 
-  useEffect(() => {}, [])
-
   useEffect(() => {
     localStorage.setItem('todos', JSON.stringify(todos))
   }, [todos])
@@ -43,6 +41,15 @@ export const TodoApp = () => {
     document.querySelector('input').focus()
   }
 
+  const handleDelete = (todoId) => {
+    const action = {
+      type: 'delete',
+      payload: todoId
+    }
+
+    dispatch(action)
+  }
+
   return (
     <div className="container wrap">
       <h1>TodoApp ({todos.length})</h1>
@@ -56,7 +63,12 @@ export const TodoApp = () => {
                 <p className="text-center">
                   {i + 1}. {todo.desc}
                 </p>
-                <button className="btn btn-danger">Borrar</button>
+                <button
+                  onClick={() => handleDelete(todo.id)}
+                  className="btn btn-danger"
+                >
+                  Borrar
+                </button>
               </li>
             ))}
           </ul>

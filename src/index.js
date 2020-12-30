@@ -20,7 +20,8 @@ import './components/style.css'
 // import { MemoHook } from './components/07-memos/MemoHook'
 // import { CallbackHook } from './components/07-memos/CallbackHook'
 // import { Padre } from './components/08-tarea-memo/Padre'
-import { TodoApp } from './components/09-useReducer/TodoApp'
+// import { TodoApp } from './components/09-useReducer/TodoApp'
+import { MainApp } from './components/10-useContext/MainApp'
 
 // Render Method
-ReactDOM.render(<TodoApp />, document.getElementById('root'))
+ReactDOM.render(<MainApp />, document.getElementById('root'))

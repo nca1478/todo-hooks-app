@@ -2,6 +2,7 @@ import React, { useEffect, useReducer } from 'react'
 import { todoReducer } from './todoReducer'
 import './TodoApp.css'
 import useForm from '../../hooks/useForm'
+import { TodoList } from './TodoList'
 
 const init = () => {
   return JSON.parse(localStorage.getItem('todos')) || []
@@ -50,7 +51,7 @@ export const TodoApp = () => {
     dispatch(action)
   }
 
-  const handleToogle = (todoId) => {
+  const handleToggle = (todoId) => {
     dispatch({
       type: 'toogle',
       payload: todoId
@@ -64,24 +65,11 @@ export const TodoApp = () => {
 
       <div className="row">
         <div className="col-7">
-          <ul className="list-group list-group-flush">
-            {todos.map((todo, i) => (
-              <li className="list-group-item" key={todo.id}>
-                <p
-                  onClick={() => handleToogle(todo.id)}
-                  className={`${todo.done && 'complete'}`}
-                >
-                  {i + 1}. {todo.desc}
-                </p>
-                <button
-                  onClick={() => handleDelete(todo.id)}
-                  className="btn btn-danger"
-                >
-                  Borrar
-                </button>
-              </li>
-            ))}
-          </ul>
+          <TodoList
+            todos={todos}
+            handleDelete={handleDelete}
+            handleToggle={handleToggle}
+          />
         </div>
         <div className="col-5">
           <h4>Agregar TODO</h4>

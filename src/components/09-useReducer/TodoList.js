@@ -1,16 +1,24 @@
 import React from 'react'
 import { TodoListItem } from './TodoListItem'
 
-export const TodoList = ({ todos, handleDelete, handleToggle }) => {
+export const TodoList = ({
+  todos,
+  handleDelete,
+  handleToggle,
+  handleEdit,
+  handleUpdate
+}) => {
   return (
     <ul className="list-group list-group-flush">
       {todos.map((todo, index) => (
         <TodoListItem
           key={todo.id}
           todo={todo}
-          i={index}
+          index={index}
           handleDelete={handleDelete}
           handleToggle={handleToggle}
+          handleEdit={handleEdit}
+          handleUpdate={handleUpdate}
         />
       ))}
     </ul>

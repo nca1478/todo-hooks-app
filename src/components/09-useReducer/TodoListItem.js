@@ -1,17 +1,35 @@
 import React from 'react'
+import { TodoEditItem } from './TodoEditItem'
+import { TodoShowItem } from './TodoShowItem'
 
-export const TodoListItem = ({ todo, i, handleDelete, handleToggle }) => {
+export const TodoListItem = ({
+  todo,
+  index,
+  handleDelete,
+  handleToggle,
+  handleEdit,
+  handleUpdate
+}) => {
   return (
     <li className="list-group-item" key={todo.id}>
-      <p
-        onClick={() => handleToggle(todo.id)}
-        className={`${todo.done && 'complete'}`}
-      >
-        {i + 1}. {todo.desc}
-      </p>
-      <button onClick={() => handleDelete(todo.id)} className="btn btn-danger">
-        Borrar
-      </button>
+      {todo.isEdit ? (
+        <TodoEditItem
+          todo={todo}
+          index={index}
+          handleUpdate={handleUpdate}
+          handleDelete={handleDelete}
+          handleToggle={handleToggle}
+          handleEdit={handleEdit}
+        />
+      ) : (
+        <TodoShowItem
+          todo={todo}
+          index={index}
+          handleDelete={handleDelete}
+          handleToggle={handleToggle}
+          handleEdit={handleEdit}
+        />
+      )}
     </li>
   )
 }

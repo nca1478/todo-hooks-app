@@ -38,6 +38,20 @@ export const TodoApp = () => {
     })
   }
 
+  const handleEdit = (todoId) => {
+    dispatch({
+      type: 'edit',
+      payload: todoId
+    })
+  }
+
+  const handleUpdate = (data) => {
+    dispatch({
+      type: 'update',
+      payload: data
+    })
+  }
+
   return (
     <div className="container wrap">
       <h1>TodoApp ({todos.length})</h1>
@@ -49,6 +63,8 @@ export const TodoApp = () => {
             todos={todos}
             handleDelete={handleDelete}
             handleToggle={handleToggle}
+            handleEdit={handleEdit}
+            handleUpdate={handleUpdate}
           />
         </div>
         <div className="col-5">

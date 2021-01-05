@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import {
   BrowserRouter as Router,
   Switch,
@@ -10,11 +10,8 @@ import { AboutScreen } from './AboutScreen'
 import { HomeScreen } from './HomeScreen'
 import { LoginScreen } from './LoginScreen'
 import { LogoutScreen } from './LogoutScreen'
-import { UserContext } from './UserContext'
 
 export const AppRouter = () => {
-  const { user } = useContext(UserContext)
-
   return (
     <Router>
       <div>

@@ -17,7 +17,8 @@ export const TodoAdd = ({ handleAddTodo }) => {
     const newTodo = {
       id: new Date().getTime(),
       desc: description,
-      done: false
+      done: false,
+      isEdit: false
     }
 
     handleAddTodo(newTodo)

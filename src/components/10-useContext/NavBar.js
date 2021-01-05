@@ -19,6 +19,9 @@ export const NavBar = () => {
           <NavLink exact to="/login" className="nav-link">
             Login
           </NavLink>
+          <NavLink exact to="/logout" className="nav-link">
+            Logout
+          </NavLink>
         </div>
       </div>
     </nav>

@@ -1,20 +1,13 @@
 import React, { useContext } from 'react'
 import useForm from '../../../hooks/useForm'
+import { handleAddTodo } from '../actions/todoAction'
 import { TodoContext } from '../context/TodoContext'
 
 export const TodoAdd = () => {
   const { dispatch } = useContext(TodoContext)
-
   const [{ description }, handleInputChange, handleClearForm] = useForm({
     description: ''
   })
-
-  const handleAddTodo = (newTodo) => {
-    dispatch({
-      type: 'add',
-      payload: newTodo
-    })
-  }
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -31,7 +24,7 @@ export const TodoAdd = () => {
       isEdit: false
     }
 
-    handleAddTodo(newTodo)
+    handleAddTodo(newTodo, dispatch)
     handleClearForm()
   }
 

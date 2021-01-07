@@ -1,3 +1,10 @@
+export const handleAddTodo = (newTodo, dispatch) => {
+  dispatch({
+    type: 'add',
+    payload: newTodo
+  })
+}
+
 export const handleUpdate = (data, dispatch) => {
   dispatch({
     type: 'update',

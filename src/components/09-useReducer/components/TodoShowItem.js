@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
-import { TodoContext } from './TodoContext'
-import { handleToggle, handleEdit, handleDelete } from './todoAction'
+import { TodoContext } from '../context/TodoContext'
+import { handleToggle, handleEdit, handleDelete } from '../actions/todoAction'
 
 export const TodoShowItem = ({ todo: { id, desc, done }, index }) => {
   const { dispatch } = useContext(TodoContext)

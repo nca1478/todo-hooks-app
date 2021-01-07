@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
-import useForm from '../../hooks/useForm'
-import { handleUpdate } from './todoAction'
-import { TodoContext } from './TodoContext'
+import useForm from '../../../hooks/useForm'
+import { handleUpdate } from '../actions/todoAction'
+import { TodoContext } from '../context/TodoContext'
 
 export const TodoEditItem = ({ todo }) => {
   const [{ description }, handleInputChange] = useForm({

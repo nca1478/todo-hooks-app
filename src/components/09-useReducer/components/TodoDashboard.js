@@ -1,8 +1,8 @@
 import React, { useContext } from 'react'
 import { TodoList } from './TodoList'
 import { TodoAdd } from './TodoAdd'
-import { TodoContext } from './TodoContext'
-import './TodoApp.css'
+import { TodoContext } from '../context/TodoContext'
+import '../TodoApp.css'
 
 export const TodoDashboard = () => {
   const { todos } = useContext(TodoContext)

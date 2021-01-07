@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
-import useForm from '../../hooks/useForm'
-import { TodoContext } from './TodoContext'
+import useForm from '../../../hooks/useForm'
+import { TodoContext } from '../context/TodoContext'
 
 export const TodoAdd = () => {
   const { dispatch } = useContext(TodoContext)

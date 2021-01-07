@@ -1,7 +1,7 @@
 import React, { useEffect, useReducer } from 'react'
-import { TodoDashboard } from './TodoDashboard'
-import { todoReducer } from './todoReducer'
-import { TodoContext } from './TodoContext'
+import { TodoDashboard } from './components/TodoDashboard'
+import { todoReducer } from './reducers/todoReducer'
+import { TodoContext } from './context/TodoContext'
 
 const init = () => {
   return JSON.parse(localStorage.getItem('todos')) || []

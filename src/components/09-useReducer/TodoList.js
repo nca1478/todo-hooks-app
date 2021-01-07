@@ -1,25 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { TodoContext } from './TodoContext'
 import { TodoListItem } from './TodoListItem'
 
-export const TodoList = ({
-  todos,
-  handleDelete,
-  handleToggle,
-  handleEdit,
-  handleUpdate
-}) => {
+export const TodoList = () => {
+  const { todos } = useContext(TodoContext)
+
   return (
     <ul className="list-group list-group-flush">
       {todos.map((todo, index) => (
-        <TodoListItem
-          key={todo.id}
-          todo={todo}
-          index={index}
-          handleDelete={handleDelete}
-          handleToggle={handleToggle}
-          handleEdit={handleEdit}
-          handleUpdate={handleUpdate}
-        />
+        <TodoListItem key={todo.id} todo={todo} index={index} />
       ))}
     </ul>
   )

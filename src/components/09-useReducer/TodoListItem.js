@@ -2,33 +2,13 @@ import React from 'react'
 import { TodoEditItem } from './TodoEditItem'
 import { TodoShowItem } from './TodoShowItem'
 
-export const TodoListItem = ({
-  todo,
-  index,
-  handleDelete,
-  handleToggle,
-  handleEdit,
-  handleUpdate
-}) => {
+export const TodoListItem = ({ todo, index }) => {
   return (
     <li className="list-group-item" key={todo.id}>
       {todo.isEdit ? (
-        <TodoEditItem
-          todo={todo}
-          index={index}
-          handleUpdate={handleUpdate}
-          handleDelete={handleDelete}
-          handleToggle={handleToggle}
-          handleEdit={handleEdit}
-        />
+        <TodoEditItem todo={todo} index={index} />
       ) : (
-        <TodoShowItem
-          todo={todo}
-          index={index}
-          handleDelete={handleDelete}
-          handleToggle={handleToggle}
-          handleEdit={handleEdit}
-        />
+        <TodoShowItem todo={todo} index={index} />
       )}
     </li>
   )

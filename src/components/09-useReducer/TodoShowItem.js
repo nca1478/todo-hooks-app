@@ -1,30 +1,28 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { TodoContext } from './TodoContext'
+import { handleToggle, handleEdit, handleDelete } from './todoAction'
 
-export const TodoShowItem = ({
-  todo,
-  index,
-  handleDelete,
-  handleToggle,
-  handleEdit
-}) => {
+export const TodoShowItem = ({ todo: { id, desc, done }, index }) => {
+  const { dispatch } = useContext(TodoContext)
+
   return (
     <div>
       <p
-        onClick={() => handleToggle(todo.id)}
-        className={`${todo.done && 'complete'}`}
+        onClick={() => handleToggle(id, dispatch)}
+        className={`${done && 'complete'}`}
       >
-        {index + 1}. {todo.desc}
+        {index + 1}. {desc}
       </p>
 
       <div>
         <button
-          onClick={() => handleEdit(todo.id)}
+          onClick={() => handleEdit(id, dispatch)}
           className="btn btn-warning mr-2"
         >
           Editar
         </button>
         <button
-          onClick={() => handleDelete(todo.id)}
+          onClick={() => handleDelete(id, dispatch)}
           className="btn btn-danger"
         >
           Borrar
